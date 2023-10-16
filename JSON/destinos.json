@@ -617,13 +617,14 @@
           ],
           "categoria": "Ciudad",
           "imagen": "los_angeles",
+          
           "destInfo":{
-            "nombre":"Hotel San Francisco Bay View",
-            "numPersonas":2,
-            "numCamas":1,
-            "fechaEntrada": "22/08",
-            "fechaSalida": "27/08",
-            "precio": "$550"
+            "nombre":"Hotel Las Vegas Strip",
+            "numPersonas":4,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "$700"
           }
         },
         {
@@ -637,12 +638,12 @@
           "categoria": "Naturaleza",
           "imagen": "san_francisco",
           "destInfo":{
-            "nombre":"Hotel Las Vegas Strip",
-            "numPersonas":4,
-            "numCamas":2,
-            "fechaEntrada": "05/09",
-            "fechaSalida": "10/09",
-            "precio": "$700"
+            "nombre":"Hotel San Francisco Bay View",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "$550"
           }
         },
         {
@@ -656,12 +657,12 @@
           "categoria": "Ciudad",
           "imagen": "las_vegas",
           "destInfo":{
-            "nombre":"Hotel Miami Beach Resort",
-            "numPersonas":2,
+            "nombre":"Hotel Las Vegas Strip",
+            "numPersonas":4,
             "numCamas":2,
-            "fechaEntrada": "14/10",
-            "fechaSalida": "19/10",
-            "precio": "$550"
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "$700"
           }
         },
         {
@@ -675,13 +676,14 @@
           "categoria": "Playa",
           "imagen": "miami",
           "destInfo":{
-            "nombre":"Hotel Chicago City Center",
-            "numPersonas":3,
+            "nombre":"Hotel Miami Beach Resort",
+            "numPersonas":2,
             "numCamas":2,
-            "fechaEntrada": "23/11",
-            "fechaSalida": "28/11",
-            "precio": "$480"
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "$550"
           }
+          
         },
         {
           "id": 35,
@@ -694,12 +696,12 @@
           "categoria": "Ciudad",
           "imagen": "chicago",
           "destInfo":{
-            "nombre":"Hotel Nueva Orleans Jazz",
-            "numPersonas":2,
-            "numCamas":1,
-            "fechaEntrada": "01/12",
-            "fechaSalida": "06/12",
-            "precio": "$470"
+            "nombre":"Hotel Chicago City Center",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "$480"
           }
         },
         {

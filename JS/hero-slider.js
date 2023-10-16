@@ -7,7 +7,7 @@ $(function () {
     })
 
     var typed = new Typed('.typed-words', {
-        strings: ["San Francisco.", " Paris.", " New Zealand.", " Maui.", " London."],
+        strings: ["San Francisco.", " Paris.", " Nueva Zelanda.", " Maui.", " Londres."],
         typeSpeed: 80,
         backSpeed: 80,
         backDelay: 4000,
