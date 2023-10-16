@@ -718,6 +718,7 @@ body {
   -o-transition: 4s opacity ease;
   transition: 4s opacity ease;
   background: #ffffff;
+  object-fit:cover;
 }
 
 .hero .slides img.active {
@@ -912,12 +913,13 @@ body {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 100%;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
+  overflow: hidden; /* Para recortar imágenes si no se ajustan */
+  
 }
 
 .owl-3-slider .owl-nav .owl-prev,
@@ -931,6 +933,7 @@ body {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
+  
 }
 
 @media (max-width: 767.98px) {
@@ -969,6 +972,7 @@ body {
 .owl-3-slider:hover .owl-nav {
   opacity: 1;
   visibility: visible;
+  
 }
 
 .title-with-bg {
@@ -1795,5 +1799,8 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
+form:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
