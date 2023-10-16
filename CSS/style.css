@@ -1782,10 +1782,18 @@ body {
   width: 20%;
 }
 
-.destinoCard p{
+.destinoCard p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp:3;
+  -webkit-line-clamp: 3;
 }
+.destinoCard img{
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.destinoCard img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 
