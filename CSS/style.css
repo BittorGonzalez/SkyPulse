@@ -133,6 +133,15 @@ body {
   padding: 0;
   font-size: 24px;
 }
+.imagenlogo{
+  width: 90px;
+}
+
+.verticalcentrado{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
 
 .site-nav .site-navigation .site-menu {
   margin-bottom: 0;

@@ -15,10 +15,10 @@ headers.forEach(header => {
 
 <nav class="site-nav">
     <div class="container">
-        <div class="site-navigation">
-            <a href="index.html" class="logo m-0">Tour <span class="text-primary">.</span></a>
+        <div class="site-navigation verticalcentrado">
+            <a href="index.html" class="logo m-0"><img class="imagenlogo" src="../Assets/img/logo/logo.png" alt="Logo"></a>
 
-            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right ">
                 <li class="active"><a href="index.html">Inicio</a></li>
                 <li class="has-children">
                     <a class="btn-dest">Destinos</a>
