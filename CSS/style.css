@@ -1806,3 +1806,31 @@ body {
 }
 
 
+.login-form {
+  display: none;
+  position: absolute;
+  top: 3em; 
+  right:0;
+  background-color: white; 
+  padding: 1.5em; 
+  border: 1px solid #ccc; 
+  width: 15em;
+  height: fit-content;
+  border-radius: 2em;
+  transition: all 300ms;
+
+  & .campo{
+    border-radius: 2em;
+    outline: none;
+    border: 1px solid black;
+  }
+}
+
+/* Mostrar el formulario cuando se hace hover en el elemento li */
+.loginBtn:hover .login-form {
+  display: block;
+}
+
+.btn-primary:active{
+  background-color: #1A374D !important;
+}

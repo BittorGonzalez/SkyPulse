@@ -3,4 +3,7 @@
 //Destinos
 var destinos = JSON.parse(localStorage.getItem('destinos'));
 
-export default destinos;
+//Usuarios
+var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+
+export {destinos, usuarios};

@@ -18,7 +18,7 @@ headers.forEach(header => {
         <div class="site-navigation verticalcentrado">
             <a href="index.html" class="logo m-0"><img class="imagenlogo" src="../Assets/img/logo/logo.png" alt="Logo"></a>
 
-            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right ">
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right position-relative ">
                 <li class="active"><a href="index.html">Inicio</a></li>
                 <li class="has-children">
                     <a class="btn-dest">Destinos</a>
@@ -32,6 +32,17 @@ headers.forEach(header => {
                 </li>
                 <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li class="loginBtn postion-relative"> 
+                    <a class="">
+                        <h5 class="bi bi-person-circle p-0 m-0"></h5>
+                        <div class="login-form position-absolute">
+                            <input type="text" placeholder="Usuario" class="w-100  p-1 pl-2 campo " name="usuario"></input>
+                            <input type="password" placeholder="Contraseña" class="w-100 mt-3  p-1 pl-2 campo" name="contrasena"></input>
+                            <button class="btn-iniciarSesion btn btn-primary w-100 p-1 mt-4">Iniciar sesion</button>
+                            <button class="btn-registro btn btn-secondary w-100 p-1 mt-2">Registro</button>
+                        </div>
+                    </a>
+                </li>
             </ul>
 
             <a href="#"
@@ -47,7 +58,42 @@ headers.forEach(header => {
     `;
 });
 
+// Logica login
+import { usuarios } from "./localStorage/descarga.js";
 
+// Iniciar sesión
+const btnLogin = document.querySelector(".btn-iniciarSesion");
+btnLogin.addEventListener("click", () => {
+    const { usuario, contrasena } = obtenerValoresForm();
+
+    const userFound = usuarios.find(user =>
+        user.usuario === usuario && user.contrasena === contrasena
+    );
+
+    if (userFound) {
+        console.log("Inicio de sesión exitoso");
+    } else {
+        console.log("Credenciales inválidas");
+    }
+});
+
+// Registro
+const btnRegistro = document.querySelector(".btn-registro")
+btnRegistro.addEventListener("click", () => {
+    console.log("Registro");
+});
+
+// Obtener valores del formulario
+function obtenerValoresForm() {
+    const campos = document.querySelectorAll(".campo");
+    const valores = {};
+
+    campos.forEach(campo => {
+        valores[campo.name] = campo.value;
+    });
+
+    return valores;
+}
 
 
 //Footer
