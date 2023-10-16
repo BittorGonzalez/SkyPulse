@@ -65,10 +65,10 @@ footers.forEach(footer => {
                     </div>
                     <div class="widget">
                         <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-twitter"><i class="bi bi-twitter-x"></i></span></a></li>
-                            <li><a href="#"><span class="icon-instagram"><i class="bi bi-instagram"></i></span></a></li>
-                            <li><a href="#"><span class="icon-facebook"><i class="bi bi-facebook"></i></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"><i class="bi bi-linkedin"></i></span></a></li>
+                            <li><a href="https://twitter.com/?lang=es"><span class="icon-twitter"><i class="bi bi-twitter-x"></i></span></a></li>
+                            <li><a href="https://www.instagram.com/"><span class="icon-instagram"><i class="bi bi-instagram"></i></span></a></li>
+                            <li><a href="https://www.facebook.com/?locale=es_ES"><span class="icon-facebook"><i class="bi bi-facebook"></i></span></a></li>
+                            <li><a href="https://es.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><span class="icon-linkedin"><i class="bi bi-linkedin"></i></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ footers.forEach(footer => {
                         <ul class="links list-unstyled">
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="https://www.google.com/maps/place/52%C2%B028'48.5%22N+62%C2%B011'09.0%22E/@52.4797906,62.1848557,542m/data=!3m1!1e3!4m4!3m3!8m2!3d52.4801256!4d62.1858301!5m1!1e4?entry=ttu">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>
