@@ -21,13 +21,13 @@ headers.forEach(header => {
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
                 <li class="active"><a href="index.html">Inicio</a></li>
                 <li class="has-children">
-                    <a href="#">Destinos</a>
+                    <a class="btn-dest">Destinos</a>
                     <ul class="dropdown">
-                        <li><a href="destinos.html">Playas paradisiacas</a></li>
-                        <li><a href="destinos.html">Naturaleza y aventura</a></li>
-                        <li><a href="destinos.html">Gastronomicos</a></li>
-                        <li><a href="destinos.html">Lujo</a></li>
-                        <li><a href="destinos.html">Historicos y culturales</a></li>
+                        <li><a href="destinos.html?categoria=Playa">Playas paradisiacas</a></li>
+                        <li><a href="destinos.html?categoria=Naturaleza">Naturaleza y aventura</a></li>
+                        <li><a href="destinos.html?categoria=Gastronomía">Gastronomicos</a></li>
+                        <li><a href="destinos.html?categoria=Ciudad">Ciudades</a></li>
+                        <li><a href="destinos.html?categoria=Cultura">Historicos y culturales</a></li>
                     </ul>
                 </li>
                 <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
@@ -46,6 +46,8 @@ headers.forEach(header => {
 
     `;
 });
+
+
 
 
 //Footer

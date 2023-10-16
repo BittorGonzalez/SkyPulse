@@ -43,16 +43,18 @@ $(function(){
 
 		}, 1000);
 
-		$('body').on('click', '.arrow-collapse', function(e) {
+		$('body').on('click', '.site-mobile-menu .has-children > a', function(e) {
 			var $this = $(this);
-			if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-				$this.removeClass('active');
-			} else {
-				$this.addClass('active');
-			}
-			e.preventDefault();  
-			
-		});
+			var $parentUl = $this.next('ul');
+		  
+			// Alternar la clase 'show' en el elemento ul para mostrar u ocultar el submenú
+			$parentUl.toggleClass('show');
+		  
+			e.preventDefault();
+		  });
+		  
+		  
+		  
 
 		$(window).resize(function() {
 			var $this = $(this),

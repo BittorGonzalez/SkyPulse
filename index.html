@@ -4,11 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Untree.co">
 	<link rel="shortcut icon" href="favicon.png">
 
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/libraries.css">
+	<link rel="stylesheet" href="css/style.css">
+
 
 	<title>Tour Free Bootstrap Template for Travel Agency by Untree.co</title>
 </head>
@@ -31,22 +31,26 @@
 								<form class="form">
 									<div class="row mb-2">
 										<div class="col-12">
-											<select name="" id="" class="form-control custom-select">
+											<select name="" id="buscadorDestinos" class="form-control custom-select">
 												<option value="">Destinos</option>
-												<option value="">Mexico</option>
-												<option value="">Indonesia</option>
-												<option value="">EEUU</option>
-												<option value="">Tailandia</option>
-												<option value="">Maldivas</option>
-												<option value="">Japon</option>
-												<option value="">Francia</option>
+												<option value="España">España</option>
+												<option value="Francia">Francia</option>
+												<option value="Italia">Italia</option>
+												<option value="EEUU">EEUU</option>
+												<option value="México">México</option>
+												<option value="Japón">Japón</option>
+												<option value="Australia">Australia</option>
 											</select>
+
+											<span class="warning-message d-none mt-3 fw-bold text-danger"><i class="bi bi-exclamation-circle-fill"></i> Debes seleccionar un destino</span>
+
 										</div>
+
 
 									</div>
 									<div class="row align-items-center">
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4 mt-3">
-											<input type="submit" class="btn btn-primary btn-block" value="Buscar">
+											<input type="submit" class="btn btn-primary btn-block form-buscar" value="Buscar">
 										</div>
 
 									</div>
@@ -94,7 +98,7 @@
 
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
-							<i class="bi bi-airplane display-4 text-primary"></i>
+							<i class="bi bi-airplane display-4"></i>
 							<h3 class="mt-3">Viajes a tu Estilo</h3>
 							<p class="mb-0">Personalizamos tus viajes. Ya sea relax en una isla o aventura extrema,
 								creamos experiencias que se adaptan.</p>
@@ -103,7 +107,7 @@
 
 					<div class="feature-1 ">
 						<div class="align-self-center">
-							<i class="bi bi-card-checklist display-4 text-primary"></i>
+							<i class="bi bi-card-checklist display-4"></i>
 							<h3 class="mt-3">Garantía de Viaje</h3>
 							<p class="mb-0">Relájate y viaja con confianza. Nuestra agencia se encarga de todos los
 								detalles para que disfrutes al máximo.</p>
@@ -116,7 +120,7 @@
 
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
-							<i class="bi bi-heart display-4 text-primary"></i>
+							<i class="bi bi-heart display-4"></i>
 							<h3 class="mt-3">Experiencia y Confianza</h3>
 							<p class="mb-0">Con décadas de experiencia, somos tu socio de viaje de confianza, listos
 								para hacer tus sueños realidad.</p>
@@ -125,7 +129,7 @@
 
 					<div class="feature-1 d-md-flex mh-4">
 						<div class="align-self-center">
-							<i class="bi bi-headset display-4 text-primary"></i>
+							<i class="bi bi-headset display-4"></i>
 							<h3 class="mt-3">Soporte 24/7</h3>
 							<p class="mb-0">Nuestro compromiso es estar disponible en cualquier momento del día o la
 								noche para atender tus necesidades de viaje. </p>
@@ -479,6 +483,9 @@
 	<script src="js/custom.js"></script>
 	<script src="js/header-footer.js"></script>
 	<script src="js/hero-slider.js"></script>
+	<script type="module" src="js/form-destinos.js"></script>
+	<script src="js/localStorage/carga.js"></script>
+	<script type="module" src="js/localStorage/descarga.js"></script>
 </body>
 
 </html>
