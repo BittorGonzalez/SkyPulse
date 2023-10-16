@@ -1,5 +1,5 @@
 // Importar destinos
-import infoDestinos from "./localStorage/descarga.js";
+import {destinos} from "./localStorage/descarga.js";
 
 // Obtener parámetro desde la URL
 function obtenerParametro() {
@@ -15,7 +15,7 @@ function buscarDestino() {
     if (isNaN(parametro)) {
         
         // Buscar por categoria o pais
-        infoDestinos.forEach(pais => {
+        destinos.forEach(pais => {
             const destinosEnPais = pais.ciudades;
             destinosEnPais.forEach(destino => {
                 if (destino.categoria === parametro || pais.pais === parametro) {
@@ -25,7 +25,7 @@ function buscarDestino() {
         });
     } else {
         // Buscar por ID
-        infoDestinos.forEach(pais => {
+        destinos.forEach(pais => {
             const destinosEnPais = pais.ciudades;
             const destinoPorID = destinosEnPais.find(destino => destino.id === parseInt(parametro));
             if (destinoPorID) {

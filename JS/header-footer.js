@@ -15,10 +15,10 @@ headers.forEach(header => {
 
 <nav class="site-nav">
     <div class="container">
-        <div class="site-navigation">
-            <a href="index.html" class="logo m-0">Tour <span class="text-primary">.</span></a>
+        <div class="site-navigation verticalcentrado">
+            <a href="index.html" class="logo m-0"><img class="imagenlogo" src="../Assets/img/logo/logo.png" alt="Logo"></a>
 
-            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right position-relative ">
                 <li class="active"><a href="index.html">Inicio</a></li>
                 <li class="has-children">
                     <a class="btn-dest">Destinos</a>
@@ -32,6 +32,17 @@ headers.forEach(header => {
                 </li>
                 <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li class="loginBtn postion-relative"> 
+                    <a class="">
+                        <h5 class="bi bi-person-circle p-0 m-0"></h5>
+                        <div class="login-form position-absolute">
+                            <input type="text" placeholder="Usuario" class="w-100  p-1 pl-2 campo " name="usuario"></input>
+                            <input type="password" placeholder="Contraseña" class="w-100 mt-3  p-1 pl-2 campo" name="contrasena"></input>
+                            <button class="btn-iniciarSesion btn btn-primary w-100 p-1 mt-4">Iniciar sesion</button>
+                            <button class="btn-registro btn btn-secondary w-100 p-1 mt-2">Registro</button>
+                        </div>
+                    </a>
+                </li>
             </ul>
 
             <a href="#"
@@ -47,7 +58,42 @@ headers.forEach(header => {
     `;
 });
 
+// Logica login
+import { usuarios } from "./localStorage/descarga.js";
 
+// Iniciar sesión
+const btnLogin = document.querySelector(".btn-iniciarSesion");
+btnLogin.addEventListener("click", () => {
+    const { usuario, contrasena } = obtenerValoresForm();
+
+    const userFound = usuarios.find(user =>
+        user.usuario === usuario && user.contrasena === contrasena
+    );
+
+    if (userFound) {
+        console.log("Inicio de sesión exitoso");
+    } else {
+        console.log("Credenciales inválidas");
+    }
+});
+
+// Registro
+const btnRegistro = document.querySelector(".btn-registro")
+btnRegistro.addEventListener("click", () => {
+    console.log("Registro");
+});
+
+// Obtener valores del formulario
+function obtenerValoresForm() {
+    const campos = document.querySelectorAll(".campo");
+    const valores = {};
+
+    campos.forEach(campo => {
+        valores[campo.name] = campo.value;
+    });
+
+    return valores;
+}
 
 
 //Footer
@@ -65,10 +111,10 @@ footers.forEach(footer => {
                     </div>
                     <div class="widget">
                         <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-twitter"><i class="bi bi-twitter-x"></i></span></a></li>
-                            <li><a href="#"><span class="icon-instagram"><i class="bi bi-instagram"></i></span></a></li>
-                            <li><a href="#"><span class="icon-facebook"><i class="bi bi-facebook"></i></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"><i class="bi bi-linkedin"></i></span></a></li>
+                            <li><a href="https://twitter.com/?lang=es"><span class="icon-twitter"><i class="bi bi-twitter-x"></i></span></a></li>
+                            <li><a href="https://www.instagram.com/"><span class="icon-instagram"><i class="bi bi-instagram"></i></span></a></li>
+                            <li><a href="https://www.facebook.com/?locale=es_ES"><span class="icon-facebook"><i class="bi bi-facebook"></i></span></a></li>
+                            <li><a href="https://es.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><span class="icon-linkedin"><i class="bi bi-linkedin"></i></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +122,7 @@ footers.forEach(footer => {
                     <div class="widget">
                         <h3 class="heading">Paginas</h3>
                         <ul class="links list-unstyled">
-                            <li><a href="destinos.html">Destinos</a></li>
+                            <li><a href="destinos.html?categoria=Playa">Destinos</a></li>
                             <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
                             <li><a href="#">Carrito</a></li>
                         </ul>
@@ -88,7 +134,7 @@ footers.forEach(footer => {
                         <ul class="links list-unstyled">
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="https://www.google.com/maps/place/52%C2%B028'48.5%22N+62%C2%B011'09.0%22E/@52.4797906,62.1848557,542m/data=!3m1!1e3!4m4!3m3!8m2!3d52.4801256!4d62.1858301!5m1!1e4?entry=ttu">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>
