@@ -76,7 +76,7 @@ footers.forEach(footer => {
                     <div class="widget">
                         <h3 class="heading">Paginas</h3>
                         <ul class="links list-unstyled">
-                            <li><a href="destinos.html">Destinos</a></li>
+                            <li><a href="destinos.html?categoria=Playa">Destinos</a></li>
                             <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
                             <li><a href="#">Carrito</a></li>
                         </ul>
