@@ -62,3 +62,31 @@
 .thumnail{
     height: 5em;
 }
+
+@media(max-width:500px){
+    .hotel-info{
+        width: 100%;
+    }
+
+    .carousel-inner {
+        width: 90%;
+        height: 23em;
+        padding: 0em;
+
+       
+    }
+
+    .carousel-control-prev, .carousel-control-next, .carousel-indicators{
+        display: none;
+    }
+
+    .info-destino{
+        margin-top: 2em;
+    }
+
+    .info-destino .container{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
