@@ -60,3 +60,17 @@ fechaSalida.textContent = destino[0].destInfo.fechaSalida
 
 const precio = document.querySelector(".precio")
 precio.textContent = destino[0].destInfo.precio
+
+//Añadir evento a boton de reserva
+const btnReserva = document.querySelector(".btn-reserva")
+btnReserva.addEventListener("click", ()=>{
+  
+  //Comprobar si inicio de sesion
+  const logged = localStorage.getItem("login")
+  if(logged){
+    alert("Se ha reservado " + destino[0].destInfo.nombre)
+  }else{
+    alert("Necesitas estar logeado para reservar")
+  }
+
+})

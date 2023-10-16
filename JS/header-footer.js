@@ -4,6 +4,7 @@ const headers = document.querySelectorAll(".global__header")
 
 headers.forEach(header => {
     header.innerHTML = `
+    
     <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -40,9 +41,12 @@ headers.forEach(header => {
                             <input type="password" placeholder="Contraseña" class="w-100 mt-3  p-1 pl-2 campo" name="contrasena"></input>
                             <button class="btn-iniciarSesion btn btn-primary w-100 p-1 mt-4">Iniciar sesion</button>
                             <button class="btn-registro btn btn-secondary w-100 p-1 mt-2">Registro</button>
+                            <div class="mensaje-error"></div>
                         </div>
                     </a>
                 </li>
+
+            </li>
             </ul>
 
             <a href="#"
@@ -58,30 +62,85 @@ headers.forEach(header => {
     `;
 });
 
-// Logica login
+// Importar usuarios
 import { usuarios } from "./localStorage/descarga.js";
 
-// Iniciar sesión
+// Logica login
 const btnLogin = document.querySelector(".btn-iniciarSesion");
+const mensajeError = document.querySelector(".mensaje-error");
+const loginform = document.querySelector(".login-form");
+const campo = document.querySelectorAll(".campo");
+
+// Comprueba si el usuario ha iniciado sesión previamente
+const isLoggedIn = localStorage.getItem("login") === "true";
+
+if (isLoggedIn) {
+    // Si el usuario ha iniciado sesión previamente, muestra el perfil
+    const savedUserData = JSON.parse(localStorage.getItem("userData"));
+    mostrarPerfil(savedUserData);
+}
+
 btnLogin.addEventListener("click", () => {
     const { usuario, contrasena } = obtenerValoresForm();
-
-    const userFound = usuarios.find(user =>
+    const userFound = usuarios.find((user) =>
         user.usuario === usuario && user.contrasena === contrasena
     );
 
     if (userFound) {
-        console.log("Inicio de sesión exitoso");
+        localStorage.setItem("login", "true");
+
+        localStorage.setItem("userData", JSON.stringify(userFound));
+
+        mostrarPerfil(userFound);
     } else {
-        console.log("Credenciales inválidas");
+        mensajeError.innerHTML = `<i class="bi bi-exclamation-circle-fill mr-1"></i> Credenciales inválidas`;
+        mensajeError.classList.add("text-danger", "mt-3");
     }
 });
 
-// Registro
-const btnRegistro = document.querySelector(".btn-registro")
-btnRegistro.addEventListener("click", () => {
-    console.log("Registro");
-});
+function mostrarPerfil(usuario) {
+    loginform.innerHTML = "";
+
+    const userImg = document.createElement("img");
+    userImg.classList.add("rounded-circle");
+    userImg.src = "https://placehold.co/60";
+    loginform.appendChild(userImg);
+
+    if (usuario && usuario.nombre) {
+        const user = document.createElement("h5");
+        user.classList.add("text-dark", "mt-4");
+        user.textContent = usuario.nombre;
+        loginform.appendChild(user);
+
+        const email = document.createElement("h6");
+        email.classList.add("text-dark", "mt-2");
+        email.textContent = usuario.correo;
+        loginform.appendChild(email);
+    }
+
+    const logoutbtn = document.createElement("button");
+    logoutbtn.classList.add("btn", "btn-secondary", "w-100", "p-1", "mt-4");
+    logoutbtn.textContent = "LOGOUT";
+    btnLogin.style.display = "none";
+
+    logoutbtn.addEventListener("click", () => {
+
+        localStorage.removeItem("login");
+        localStorage.removeItem("userData");
+        window.location.reload()
+
+    });
+
+    loginform.appendChild(logoutbtn);
+}
+
+
+
+//Logica Registro
+//const btnRegistro = document.querySelector(".btn-registro")
+// btnRegistro.addEventListener("click", () => {
+//     console.log("Registro");
+// });
 
 // Obtener valores del formulario
 function obtenerValoresForm() {

@@ -1808,10 +1808,7 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-form:hover{
-  transform: scale(1.01);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
+
 
 .login-form {
   display: none;
@@ -1821,7 +1818,7 @@ form:hover{
   background-color: white; 
   padding: 1.5em; 
   border: 1px solid #ccc; 
-  width: 15em;
+  width: 17em;
   height: fit-content;
   border-radius: 2em;
   transition: all 300ms;
@@ -1833,11 +1830,22 @@ form:hover{
   }
 }
 
-/* Mostrar el formulario cuando se hace hover en el elemento li */
 .loginBtn:hover .login-form {
   display: block;
 }
 
 .btn-primary:active{
   background-color: #1A374D !important;
+}
+
+
+#customAlert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero .container {
+    margin-top: 5em;
 }

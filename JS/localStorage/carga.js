@@ -22,3 +22,4 @@ fetch("../JSON/usuarios.json")
     .catch(error => {
         console.error("Hubo un error al cargar los usuarios:", error);
     });
+
